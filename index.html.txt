@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jennifer Lee & Co., Solicitors李淑萍律師行 | Virtue Legal</title>
+    <style>
+        :root {
+            --primary-color: #1a2b5c;
+            --secondary-color: #c5a47e;
+            --text-dark: #333;
+            --text-light: #fff;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .header {
+            background: var(--primary-color);
+            color: var(--text-light);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(26,43,92,0.9), rgba(26,43,92,0.8)),
+                        url('law-firm-hero.jpg') center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            border: 1px solid #eee;
+            padding: 2rem;
+            margin: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .bilingual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary-color);
+            padding: 2rem 0;
+            border-bottom: 2px solid var(--secondary-color);
+            width: 200px;
+            margin: 0 auto 2rem;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .bilingual {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <a href="#home">首頁 / Home</a>
+            <a href="#services">服務 / Services</a>
+            <a href="#team">團隊 / Team</a>
+            <a href="#contact">聯絡 / Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>德正律師事務所</h1>
+            <h2>Virtue Legal Practice</h2>
+            <p>捍衛正義 • 專業盡責 • 守護權益</p>
+            <p>Upholding Justice • Professional Excellence • Protecting Rights</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <h3 class="section-title">專業服務 / Services</h3>
+        <div class="bilingual">
+            <div class="service-card">
+                <h4>刑事案件 / Criminal Law</h4>
+                <p>處理各級法院刑事訴訟程序<br>Representation in all levels of criminal courts</p>
+            </div>
+            <div class="service-card">
+                <h4>民事訴訟 / Civil Litigation</h4>
+                <p>合約糾紛、人身傷害賠償等<br>Contract disputes, personal injury claims</p>
+            </div>
+            <div class="service-card">
+                <h4>離婚家事 / Family Law</h4>
+                <p>離婚協議、贍養費、子女管養權<br>Divorce proceedings, maintenance arrangements</p>
+            </div>
+            <div class="service-card">
+                <h4>遺產規劃 / Probate Services</h4>
+                <p>遺囑訂立、遺產承辦、信託管理<br>Will drafting, estate administration</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <h3 class="section-title">專業團隊 / Our Team</h3>
+        <div class="bilingual">
+            <!-- 團隊成員內容 -->
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h3>聯絡我們 / Contact Us</h3>
+        <p>香港九龍彌敦道565-567號銀座廣場17樓全層<br>
+        17th Floor, Ginza Square, Nos. 565-567 Nathan Road, Kowloon, Hong Kong.</p>
+        <p>電話: +852 9799 9593</p>
+    </footer>
+
+    <script>
+        // 可添加平滑滾動效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
